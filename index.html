@@ -303,10 +303,17 @@
         </li>
       </ul>
       
-      <div class="dni-input">
-        <label for="dni">Ingrese su DNI para votar:</label>
-        <input type="text" id="dni" placeholder="DNI (sin puntos)">
-      </div>
+<div class="dni-container">
+  <label for="dni">Ingrese su DNI para votar:</label><br>
+  <input type="text" id="dni" placeholder="DNI (sin puntos)"><br><br>
+
+  <label for="anio-confirmacion">Año aproximado de Confirmación:</label><br>
+  <input type="number" id="anio-confirmacion" placeholder="Ej. 2010" min="1900" max="2025"><br><br>
+
+  <label for="iglesia-confirmacion">Nombre de la Iglesia donde fue confirmado (opcional):</label><br>
+  <input type="text" id="iglesia-confirmacion" placeholder="Ej. Parroquia San José">
+</div>
+
       
 
       <button class="boton" onclick="emitirVoto()">Emitir Voto</button>
