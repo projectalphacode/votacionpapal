@@ -133,11 +133,46 @@
       color: green;
       font-weight: bold;
     }
+
+    .dni-container {
+      margin-top: 20px;
+    }
+
+    .comprobante {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: none; /* Se muestra después de emitir el voto */
+
+}
+
+
+    #boton-voto {
+      background-color: #800000;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    #boton-voto.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
   </style>
 </head>
 <body>
   <div class="contenedor">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Emblem_of_the_Papacy_SE.svg/2048px-Emblem_of_the_Papacy_SE.svg.png" class="logo" alt="Escudo Papal">
+    <img src="escudopapal.jpg" class="logo" alt="Escudo Papal">
     <h1>Cónclave Extraordinario 2025</h1>
 
     <div class="infografia">
@@ -147,6 +182,9 @@
       </p>LAS PERSONAS QUE HAYAN OFICIALIZADO SU CREENCIA MEDIANTE EL SACRAMENTO DE LA CONFIRMACION DEBEN PARTICIPAR OBLIGATORIAMENTE.</p>
       <p>¡A continuación, podrá conocer a los candidatos que están en la lista para el Cónclave 2025 y tomar su voto!</p>
     </div>
+
+
+
 
     <div class="selector">
       <h2>Seleccione su Candidato</h2>
@@ -165,9 +203,10 @@
         <option value="sarah">Robert Sarah</option>
       </select>
 
+
       <ul class="candidatos-lista" id="candidatos-lista">
         <li class="candidato" id="candidato-zuppi">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Cardinale_Zuppi_2022.jpg" alt="Mateo María Zuppi">
+          <img src="mateozuppi.jpg" alt="Mateo María Zuppi">
           <div class="candidato-info">
             <h3>Mateo María Zuppi</h3>
             <p>Italia, 69 años</p>
@@ -175,7 +214,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-tagle">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Luis_Antonio_Tagle.jpg" alt="Luis Antonio Gokim Tagle">
+          <img src="luistagle.jpg" alt="Luis Antonio Gokim Tagle">
           <div class="candidato-info">
             <h3>Luis Antonio Gokim Tagle</h3>
             <p>Filipinas, 67 años</p>
@@ -183,7 +222,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-parolin">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Pietro_Parolin_2013.jpg" alt="Pietro Parolin">
+          <img src="pietroparolin.jpg" alt="Pietro Parolin">
           <div class="candidato-info">
             <h3>Pietro Parolin</h3>
             <p>Italia, 70 años</p>
@@ -191,7 +230,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-erdo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Peter_Erdo_2016.jpg" alt="Peter Erdo">
+          <img src="petererdo.jpeg" alt="Peter Erdo">
           <div class="candidato-info">
             <h3>Peter Erdo</h3>
             <p>Hungría, 71 años</p>
@@ -199,7 +238,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-avelina">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Jean_Marc_Avelina.jpg" alt="Jean Marc Avelina">
+          <img src="jeanmarc.jpg" alt="Jean Marc Avelina">
           <div class="candidato-info">
             <h3>Jean Marc Avelina</h3>
             <p>Francia, 58 años</p>
@@ -207,7 +246,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-lacroix">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Archbishop_Gerald_Lacroix.jpg" alt="Gerald Lacroix">
+          <img src="lacroix.jpeg" alt="Gerald Lacroix">
           <div class="candidato-info">
             <h3>Gerald Lacroix</h3>
             <p>Canadá, 67 años</p>
@@ -215,7 +254,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-hollerich">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Jean_Claude_Hollerich_2020.jpg" alt="Jean Claude Hollerich">
+          <img src="hollerich.jpg" alt="Jean Claude Hollerich">
           <div class="candidato-info">
             <h3>Jean Claude Hollerich</h3>
             <p>Luxemburgo, 61 años</p>
@@ -223,7 +262,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-prevost">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Robert_Francis_Prevost_2017.jpg" alt="Robert Francis Prevost">
+          <img src="prevost.jpg" alt="Robert Francis Prevost">
           <div class="candidato-info">
             <h3>Robert Francis Prevost</h3>
             <p>EE. UU., 63 años</p>
@@ -231,7 +270,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-lopez">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Crist%C3%B3bal_L%C3%B3pez_2022.jpg" alt="Cristóbal López">
+          <img src="lopez.jpeg" alt="Cristóbal López">
           <div class="candidato-info">
             <h3>Cristóbal López</h3>
             <p>España, 63 años</p>
@@ -239,7 +278,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-david">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Pablo_Virgilio_David.jpg" alt="Pablo Virgilio David">
+          <img src="david.jpg" alt="Pablo Virgilio David">
           <div class="candidato-info">
             <h3>Pablo Virgilio David</h3>
             <p>Filipinas, 58 años</p>
@@ -247,7 +286,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-scherer">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Odilio_Scherer.jpg" alt="Odilio Pedro Scherer">
+          <img src="scherer.jpg" alt="Odilio Pedro Scherer">
           <div class="candidato-info">
             <h3>Odilio Pedro Scherer</h3>
             <p>Brasil, 75 años</p>
@@ -255,7 +294,7 @@
           </div>
         </li>
         <li class="candidato" id="candidato-sarah">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Robert_Sarah_%28cropped%29.jpg" alt="Robert Sarah">
+          <img src="sarah.JPG" alt="Robert Sarah">
           <div class="candidato-info">
             <h3>Robert Sarah</h3>
             <p>Guinea, 78 años</p>
@@ -264,6 +303,11 @@
         </li>
       </ul>
       
+      <div class="dni-input">
+        <label for="dni">Ingrese su DNI para votar:</label>
+        <input type="text" id="dni" placeholder="DNI (sin puntos)">
+      </div>
+      
 
       <button class="boton" onclick="emitirVoto()">Emitir Voto</button>
 
@@ -271,22 +315,56 @@
     </div>
   </div>
 
-  <script>
+  <div class="comprobante" id="comprobante-voto">
+    <h2>Comprobante de Voto</h2>
+    <p><strong>DNI:</strong> <span id="comprobante-dni"></span></p>
+    <p><strong>Candidato Elegido:</strong> <span id="comprobante-candidato"></span></p>
+    <p><strong>Fecha de Voto:</strong> <span id="comprobante-fecha"></span></p>
+    <button class="boton" onclick="descargarComprobante()">Descargar Comprobante</button>
+    <p style="margin-top: 20px; color: #800000; font-style: italic;">
+      *Esta página es una broma. Jajajaaaaa 😂😂😘😘 Ningún voto aquí tiene validez real y no está afiliada al Vaticano.
+    </p>
+  </div>
+  
+</div>
+</div>
+
+<script>
     function emitirVoto() {
-      document.getElementById("mensaje").style.display = 'block';
+      const dni = document.getElementById('dni').value.trim();
+      const selector = document.getElementById('candidatos-selector');
+      const candidatoSeleccionado = selector.options[selector.selectedIndex].text;
+      const fecha = new Date().toLocaleDateString('es-AR', { day: '2-digit', month: 'long', year: 'numeric' });
+
+      if (dni === '') {
+        alert('Por favor, ingrese su DNI.');
+        return;
+      }
+
+      document.getElementById('comprobante-dni').textContent = dni;
+      document.getElementById('comprobante-candidato').textContent = candidatoSeleccionado;
+      document.getElementById('comprobante-fecha').textContent = fecha;
+
+      document.getElementById('comprobante-voto').style.display = 'block';
     }
 
-    // Mostrar la información del candidato seleccionado automáticamente
-    document.getElementById('candidatos-selector').addEventListener('change', function() {
-      const candidato = this.value;
-      const listaCandidatos = document.querySelectorAll('.candidato');
-      listaCandidatos.forEach(item => {
-        item.style.display = item.id === 'candidato-' + candidato ? 'flex' : 'none';
-      });
-    });
+    function descargarComprobante() {
+      const dni = document.getElementById('comprobante-dni').textContent;
+      const candidato = document.getElementById('comprobante-candidato').textContent;
+      const fecha = document.getElementById('comprobante-fecha').textContent;
 
-    // Mostrar el primer candidato por defecto
-    document.getElementById('candidatos-selector').dispatchEvent(new Event('change'));
+      const contenido = `Comprobante de Voto\n\nDNI: ${dni}\nCandidato: ${candidato}\nFecha: ${fecha}`;
+      const blob = new Blob([contenido], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `comprobante_voto_${dni}.txt`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
   </script>
 </body>
 </html>
